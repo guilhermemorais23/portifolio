@@ -1,0 +1,25 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+import { perfil } from "../data/perfil";
+import FichaTecnica from "./FichaTecnica.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">{t(ui.hero.eyebrow, lang)}</span>
+      <h1>{perfil.nome}</h1>
+      <p class="lede">{t(ui.hero.lede, lang)}</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projetos">{t(ui.hero.ctaProjects, lang)}</a>
+        <a class="btn ghost" href="#contato">{t(ui.hero.ctaContact, lang)}</a>
+      </div>
+    </div>
+    <FichaTecnica lang={lang} />
+  </div>
+</header>

@@ -1,0 +1,32 @@
+---
+import { type Lang, homeUrl, t, ui } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const other: Lang = lang === "pt" ? "en" : "pt";
+---
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href={homeUrl(lang)}>guilherme<span class="dot">.</span>morais</a>
+    <div class="nav-links">
+      <a href="#projetos">{t(ui.nav.projects, lang)}</a>
+      <a href="#experiencia">{t(ui.nav.experience, lang)}</a>
+      <a href="#tecnologias">{t(ui.nav.stack, lang)}</a>
+      <a href="#contato">{t(ui.nav.contact, lang)}</a>
+      <a class="nav-toggle keep" href={homeUrl(other)} aria-label={t(ui.nav.switchLangLabel, lang)}>
+        {t(ui.nav.switchLang, lang)}
+      </a>
+      <button
+        type="button"
+        id="theme-toggle"
+        class="nav-toggle keep"
+        aria-label={t(ui.nav.themeLabel, lang)}
+      >
+        ◐
+      </button>
+    </div>
+  </div>
+</nav>

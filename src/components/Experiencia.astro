@@ -1,0 +1,28 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+import { experiencia } from "../data/experiencia";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<section class="section wrap reveal" id="experiencia">
+  <div class="sheet-ref">
+    <span class="num">A—02</span>
+    <h2>{t(ui.sections.experience, lang)}</h2>
+    <span class="rule"></span>
+  </div>
+  {
+    experiencia.map((e) => (
+      <div class="exp">
+        <div class="meta" set:html={t(e.periodo, lang) + "<br />" + t(e.detalhe, lang)} />
+        <div>
+          <h3>{t(e.cargo, lang)}</h3>
+          <p>{t(e.texto, lang)}</p>
+        </div>
+      </div>
+    ))
+  }
+</section>

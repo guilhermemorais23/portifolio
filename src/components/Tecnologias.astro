@@ -1,0 +1,31 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+import { stack } from "../data/perfil";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<section class="section wrap reveal" id="tecnologias">
+  <div class="sheet-ref">
+    <span class="num">A—04</span>
+    <h2>{t(ui.sections.stack, lang)}</h2>
+    <span class="rule"></span>
+  </div>
+  <div class="tech-grid">
+    {
+      stack.map((col) => (
+        <div class="tech-col">
+          <h4>{t(col.grupo, lang)}</h4>
+          <ul>
+            {col.itens.map((it) => (
+              <li>{it}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
