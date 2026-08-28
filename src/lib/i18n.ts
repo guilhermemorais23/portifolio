@@ -28,7 +28,7 @@ export const ui = {
     themeLabel: { pt: "Alternar tema", en: "Toggle theme" },
   },
   hero: {
-    eyebrow: { pt: "// desenvolvedor full-stack · PJ", en: "// full-stack developer · contractor" },
+    eyebrow: { pt: "// desenvolvedor full-stack · PJ · 3 anos", en: "// full-stack developer · contractor · 3 yrs" },
     lede: {
       pt: "Construo aplicações web e mobile de ponta a ponta — do front-end à API, ao banco e ao deploy.",
       en: "I build web and mobile applications end to end — from front-end to API, database and deploy.",
@@ -41,7 +41,7 @@ export const ui = {
     role: { pt: "função", en: "role" },
     roleValue: { pt: "Full-stack Web", en: "Full-stack Web" },
     experience: { pt: "experiência", en: "experience" },
-    experienceValue: { pt: "2 anos (PJ)", en: "2 yrs (contract)" },
+    experienceValue: { pt: "3 anos (PJ)", en: "3 yrs (contract)" },
     based: { pt: "base", en: "based" },
     basedValue: { pt: "João Pessoa, PB · remoto", en: "João Pessoa, BR · remote" },
     stack: { pt: "stack", en: "stack" },
