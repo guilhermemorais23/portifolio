@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <pattern id="grid" width="68" height="68" patternUnits="userSpaceOnUse">
+      <path d="M68 0H0V68" fill="none" stroke="#6fb3c9" stroke-opacity="0.12" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#10141c" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <text x="82" y="150" fill="#6fb3c9" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="23" letter-spacing="4">
+    // DESENVOLVEDOR FULL-STACK
+  </text>
+  <text x="78" y="312" fill="#eaecef" font-size="120" font-weight="500" letter-spacing="-3"
+        textLength="1000" lengthAdjust="spacingAndGlyphs">Guilherme Morais</text>
+  <text x="82" y="388" fill="#949cab" font-size="33">
+    Aplicações web e mobile de ponta a ponta.
+  </text>
+  <text x="82" y="432" fill="#949cab" font-size="33">
+    TypeScript · React · Next · Node
+  </text>
+
+  <g stroke="#262d3b" stroke-width="1.5" fill="none">
+    <rect x="82" y="486" width="1036" height="86" />
+    <line x1="420" y1="486" x2="420" y2="572" />
+    <line x1="760" y1="486" x2="760" y2="572" />
+  </g>
+  <g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="19" fill="#949cab">
+    <text x="104" y="526">FUNÇÃO</text>
+    <text x="104" y="554" fill="#eaecef">Full-stack Web</text>
+    <text x="442" y="526">BASE</text>
+    <text x="442" y="554" fill="#eaecef">João Pessoa, PB · remoto</text>
+    <text x="782" y="526">STATUS</text>
+    <text x="782" y="554" fill="#6fb3c9">disponível</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+import { projetos } from "../data/projetos";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+/** Join the site base with an internal path, collapsing duplicate slashes. */
+function withBase(path: string): string {
+  return `${base}/${path}`.replace(/\/{2,}/g, "/");
+}
+---
+
+<section class="section wrap reveal" id="projetos">
+  <div class="sheet-ref">
+    <span class="num">A—03</span>
+    <h2>{t(ui.sections.projects, lang)}</h2>
+    <span class="rule"></span>
+  </div>
+  <span class="ledger-note">{t(ui.projects.note, lang)}</span>
+
+  {
+    projetos.map((p, i) => (
+      <div class="proj">
+        <span class="idx">{String(i + 1).padStart(2, "0")}</span>
+        <div>
+          <h3>
+            {p.nome}
+            {p.sufixo && <span> {t(p.sufixo, lang)}</span>}
+          </h3>
+          <p class="desc">{t(p.descricao, lang)}</p>
+          <div class="tags">
+            {p.stack.map((s) => (
+              <span class="tag">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div class="right">
+          <div class="year">{p.ano}</div>
+          <div class="plinks">
+            {p.links.map((l) =>
+              l.tipo === "repo-private" ? (
+                <span>{t(ui.projects.repoPrivate, lang)}</span>
+              ) : l.tipo === "repo" ? (
+                <a href={l.href} target="_blank" rel="noopener">
+                  {t(ui.projects.repo, lang)}
+                </a>
+              ) : (
+                <a href={withBase(l.href ?? "")}>{t(ui.projects.demo, lang)}</a>
+              ),
+            )}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>

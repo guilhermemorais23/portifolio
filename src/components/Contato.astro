@@ -1,0 +1,36 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+import { perfil } from "../data/perfil";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+function isExternal(href: string): boolean {
+  return href.startsWith("http");
+}
+---
+
+<section class="section wrap reveal" id="contato">
+  <div class="sheet-ref">
+    <span class="num">A—05</span>
+    <h2>{t(ui.sections.contact, lang)}</h2>
+    <span class="rule"></span>
+  </div>
+  <div class="contact-grid">
+    {
+      perfil.contato.map((c) => (
+        <div class="contact-cell">
+          <span class="k">{c.k}</span>
+          <a
+            href={c.href}
+            {...isExternal(c.href) ? { target: "_blank", rel: "noopener" } : {}}
+          >
+            {c.label}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>

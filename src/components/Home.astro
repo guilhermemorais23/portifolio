@@ -1,0 +1,27 @@
+---
+import type { Lang } from "../lib/i18n";
+import Nav from "./Nav.astro";
+import Hero from "./Hero.astro";
+import Sobre from "./Sobre.astro";
+import Experiencia from "./Experiencia.astro";
+import Projetos from "./Projetos.astro";
+import Tecnologias from "./Tecnologias.astro";
+import Contato from "./Contato.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<Nav lang={lang} />
+<Hero lang={lang} />
+<main>
+  <Sobre lang={lang} />
+  <Experiencia lang={lang} />
+  <Projetos lang={lang} />
+  <Tecnologias lang={lang} />
+  <Contato lang={lang} />
+</main>
+<Footer lang={lang} />

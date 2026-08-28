@@ -1,0 +1,21 @@
+---
+import { type Lang, t, ui } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const f = ui.ficha;
+---
+
+<dl class="titleblock" aria-label={t(f.head, lang)}>
+  <div class="tb-head"><span>{t(f.head, lang)}</span><span>rev. 2026</span></div>
+  <div class="tb-row"><dt>{t(f.role, lang)}</dt><dd>{t(f.roleValue, lang)}</dd></div>
+  <div class="tb-row"><dt>{t(f.experience, lang)}</dt><dd>{t(f.experienceValue, lang)}</dd></div>
+  <div class="tb-row"><dt>{t(f.based, lang)}</dt><dd>{t(f.basedValue, lang)}</dd></div>
+  <div class="tb-row"><dt>{t(f.stack, lang)}</dt><dd>{t(f.stackValue, lang)}</dd></div>
+  <div class="tb-row">
+    <dt>{t(f.status, lang)}</dt>
+    <dd><span class="status-dot"></span>{t(f.statusValue, lang)}</dd>
+  </div>
+</dl>
