@@ -21,8 +21,8 @@ export const projetos: Projeto[] = [
     nome: "Gerenciador de OS",
     ano: "2025—26",
     descricao: {
-      pt: "Sistema de ordens de serviço para uma empresa de manutenção. Quatro perfis (admin, técnico e portal do cliente), fluxo de antes/depois com fotos e assinatura, geração de PDF e disparo de WhatsApp e e-mail. Feito em parceria — atuei na arquitetura e na implementação.",
-      en: "Service-order system for a maintenance company. Four roles (admin, technician and a client portal), a before/after flow with photos and signature, PDF generation and WhatsApp and email dispatch. Built in partnership — I worked on architecture and implementation.",
+      pt: "Sistema de ordens de serviço para uma empresa de manutenção. Quatro perfis (admin, técnico e portal do cliente), fluxo de antes/depois com fotos e assinatura, geração de PDF e disparo de WhatsApp e e-mail. Feito em parceria — atuei na arquitetura, na implementação e na migração do banco de MongoDB para PostgreSQL/Supabase (com migrations).",
+      en: "Service-order system for a maintenance company. Four roles (admin, technician and a client portal), a before/after flow with photos and signature, PDF generation and WhatsApp and email dispatch. Built in partnership — I worked on architecture, implementation and the database migration from MongoDB to PostgreSQL/Supabase (with migrations).",
     },
     stack: ["Next.js", "React", "Node / Express", "Supabase", "PostgreSQL", "JWT"],
     links: [
