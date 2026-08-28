@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build with Astro
-        uses: withastro/action@v3
+        uses: withastro/action@v6
         # withastro/action runs `npm ci` + `npm run build` and uploads the
         # Pages artifact from ./dist. `astro.config.mjs` already sets `site`
         # and `base`, so nothing extra is needed here.
