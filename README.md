@@ -44,13 +44,13 @@ public/
 - **`.github/workflows/deploy.yml`** — em push na `main`: build e publish automático no GitHub Pages.
 - **`.github/dependabot.yml`** — atualização semanal de dependências e GitHub Actions.
 
-## Deploy — passos manuais (uma vez)
+## Deploy — passo manual (uma vez)
 
-1. **Renomear o repositório** para `guilhermemorais23.github.io`
-   (Settings → *Repository name*). Isso faz o site ser servido na raiz do domínio
-   (`https://guilhermemorais23.github.io`), que é o que `astro.config.mjs` espera
-   (`base: "/"`).
-   *Se preferir manter o nome `portifolio`*, troque `base` para `"/portifolio/"`
-   em `astro.config.mjs`.
-2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
-3. Push na `main` → o workflow publica sozinho.
+1. **Settings → Pages → Build and deployment → Source: `GitHub Actions`.**
+2. Merge na `main` → o workflow publica sozinho em
+   `https://guilhermemorais23.github.io/portifolio/`.
+
+O `astro.config.mjs` já usa `base: "/portifolio/"` (repo mantém o nome
+`portifolio`). Se um dia o repo for renomeado para
+`guilhermemorais23.github.io`, trocar `base` para `"/"` e a `Sitemap:` em
+`public/robots.txt`.

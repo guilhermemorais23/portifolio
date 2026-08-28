@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guilhermemorais23.github.io/sitemap-index.xml
+Sitemap: https://guilhermemorais23.github.io/portifolio/sitemap-index.xml
