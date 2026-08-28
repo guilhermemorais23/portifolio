@@ -18,8 +18,9 @@ const ptUrl = new URL(homeUrl("pt"), site).href;
 const enUrl = new URL(homeUrl("en"), site).href;
 
 const asset = (name: string) => (import.meta.env.BASE_URL + "/" + name).replace(/\/{2,}/g, "/");
-const ogImage = new URL(asset("og-image.svg"), site).href;
+const ogImage = new URL(asset("og-image.png"), site).href;
 const faviconHref = asset("favicon.svg");
+const sitemapHref = asset("sitemap-index.xml");
 const htmlLang = lang === "pt" ? "pt-br" : "en";
 ---
 
@@ -47,6 +48,7 @@ const htmlLang = lang === "pt" ? "pt-br" : "en";
     <meta name="twitter:image" content={ogImage} />
 
     <link rel="icon" href={faviconHref} type="image/svg+xml" />
+    <link rel="sitemap" href={sitemapHref} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 // Site URL and base path.
@@ -10,6 +11,7 @@ export default defineConfig({
   site: "https://guilhermemorais23.github.io",
   base: "/",
   trailingSlash: "ignore",
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

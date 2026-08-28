@@ -17,7 +17,7 @@ const { lang } = Astro.props;
   {
     experiencia.map((e) => (
       <div class="exp">
-        <div class="meta" set:html={t(e.periodo, lang) + "<br />" + t(e.detalhe, lang)} />
+        <div class="meta">{t(e.periodo, lang)}<br />{t(e.detalhe, lang)}</div>
         <div>
           <h3>{t(e.cargo, lang)}</h3>
           <p>{t(e.texto, lang)}</p>
